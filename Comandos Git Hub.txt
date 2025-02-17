@@ -1,0 +1,34 @@
+GIT
+
+
+
+git init (novo diretorio - pasta)
+
+git add . (adiciona todas as alteracoes ao diretorio)
+
+git commit -m "mensagem" (implementa a versão e adiciona nome)
+
+git log (historico de commits)
+
+git status (informacoes como arquivos modificados, adicionados a staging area, removidos, etc)
+
+git reset --hard HEAD~1 - (desfaz o ultimo commit e atualiza o estado do repositorio para refletir o commit anterior)
+
+
+
+GIT HUB
+
+
+git remote add origin {link} (conectar repositorio local e remoto)
+
+git push -u origin main (enviar do repositorio local para o remoto)
+
+git pull (enviar do repositorio remoto para o local)
+
+git clone {link} (copiar repositorio remoto no local)
+
+git push origin main (envia os commits locais para o repositorio remoto da branch main)
+
+git show 010101 (mostra mais detalhes do commit)
+
+git remote -v (checagem de transição entre git e GitHub)
