@@ -1,0 +1,38 @@
+/* 10/03/2025
+
+Como resetar a cronometragem do temporizador
+
+digitalRead: checa se um comando esta ativo
+
+*/
+
+#define pinBotao 10
+#define pinLed 2
+
+int contagem = 0 ;
+bool estadoAnteriorBotao = 0 ;
+
+void setup()
+  
+{
+  
+  Serial.begin (9600) ;
+  
+  pinMode (pinBotao, INPUT) ;
+  pinMode (pinLed, OUTPUT) ;
+  
+}
+
+void loop()
+  
+{
+  
+  bool estadoAtualBotao = digitalRead (pinBotao) ;
+  if (estadoAtualBotao == 1 && !estadoAnteriorBotao) // ou estadoAnteriorBotao == 0
+  {
+    contagem++ ;
+    Serial.println (contagem) ;
+  }
+    estadoAnteriorBotao = estadoAtualBotao ;
+  
+}
